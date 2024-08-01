@@ -212,10 +212,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const backwardButton = document.getElementById('backward');
   const forwardButton = document.getElementById('forward');
   const progressBar = document.getElementById('progressBar');
-  const currentTimeSpan = document.getElementById('currentTime');
-  const durationSpan = document.getElementById('duration');
-  const volumerBar = document.getElementById('volumeBar');
-  videoPlayer.volume = volumerBar.value / 100;
+  // const currentTimeSpan = document.getElementById('currentTime');
+  // const durationSpan = document.getElementById('duration');
+  // const volumerBar = document.getElementById('volumeBar');
+  // videoPlayer.volume = volumerBar.value / 100;
 
 
   playPauseButton.addEventListener('click', () => {
@@ -241,11 +241,11 @@ document.addEventListener("DOMContentLoaded", () => {
   videoPlayer.addEventListener('timeupdate', () => {
     const progress = (videoPlayer.currentTime / videoPlayer.duration) * 100;
     progressBar.value = progress;
-    currentTimeSpan.textContent = formatTime(videoPlayer.currentTime);
+    // currentTimeSpan.textContent = formatTime(videoPlayer.currentTime);
   });
 
   videoPlayer.addEventListener('loadedmetadata', () => {
-    durationSpan.textContent = formatTime(videoPlayer.duration);
+    // durationSpan.textContent = formatTime(videoPlayer.duration);
   });
 
   progressBar.addEventListener('input', () => {
@@ -253,9 +253,9 @@ document.addEventListener("DOMContentLoaded", () => {
     videoPlayer.currentTime = newTime;
   });
 
-  volumerBar.addEventListener('input', () => {
-    videoPlayer.volume = volumerBar.value / 100
-  })
+  // volumerBar.addEventListener('input', () => {
+  //   videoPlayer.volume = volumerBar.value / 100
+  // })
 
 
   function formatTime(seconds) {
