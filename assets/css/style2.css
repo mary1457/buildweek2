@@ -11,6 +11,10 @@
     font-family: "Circular" !important;
     
   }
+
+  .pointer {
+    cursor: pointer;
+  }
   
   .logo img {
     width: 20vh;
@@ -129,12 +133,8 @@
     cursor: pointer;
     margin-right: 20px;
   }
-  .hero button:hover,
-  .hero button:active,
-  .hero button:focus {
-    background-color: #f2f2f2;
-  }
   
+  #btnPlay:hover { background-color: #1db954;}
   .hero button:nth-of-type(2){
     background-color: black;
     color: white;
@@ -156,7 +156,12 @@
    
   }
  .heroImg {flex: 1 1} 
- 
+  
+  .heroArtist {
+    background-image: var(--my-var) !important;
+    background-size: contain !important;
+    background-position: center !important;
+  }
   
   .annunced {
     align-self: start;
@@ -164,6 +169,15 @@
     padding: 2px 10px;
     border: 1px solid rgba(255, 255, 255, 0.176);
     border-radius: 20px;
+    font-size: 0.8em;
+    
+  }
+  .annunced2 {
+    align-self: start;
+    color: rgba(255, 255, 255, 0.377);
+    padding: 2px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.176);
+   
     font-size: 0.8em;
     
   }
@@ -428,4 +442,4 @@ height: 300px;}
           
           
         
-        
+         
